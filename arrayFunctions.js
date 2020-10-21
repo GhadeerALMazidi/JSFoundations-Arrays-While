@@ -9,7 +9,8 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(a) {
-  // Your code here
+  if (a.length % 2 === 1) return true;
+  else return false;
 }
 
 /**
@@ -23,7 +24,8 @@ function isArrayLengthOdd(a) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(a) {
-  // Your code here
+  if (a.length % 2 === 0) return true;
+  else return false;
 }
 
 /**
@@ -35,7 +37,9 @@ function isArrayLengthEven(a) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(a) {
-  // Your code here
+  a.push("Laila");
+  console.log(a);
+  return a;
 }
 
 /**
@@ -47,10 +51,9 @@ function addLailaToArray(a) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(a) {
-  // Your code here
+  return a.pop();
 }
-
-/**
+/** or return a.pop();
  * secondHalfOfArrayIfItIsEven(a):
  * - receives array `a`
  * - returns a new array that's the second half of the original array if it has an even number of elements
@@ -61,7 +64,10 @@ function eliminateTeam(a) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(a) {
-  // Your code here
+  if (a.lenght % 2 === 0) return a.slice(a.lenght / 2);
+  else {
+    return [];
+  }
 }
 
 /**
@@ -79,9 +85,13 @@ function secondHalfOfArrayIfItIsEven(a) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(s) {
-  // Your code here
+  while (s.endsWith("!!")) {
+    s = s.slice(0, -1);
+    console.log(s);
+  }
+  return s;
 }
-
+youGottaCalmDown("HI!!!!!!!!!1");
 module.exports = {
   isArrayLengthOdd,
   isArrayLengthEven,
